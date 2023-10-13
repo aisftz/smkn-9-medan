@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing Page">
+    <meta name="author" content="Nurhabibah">
+    <title>SMKN 9 Medan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .btn {
+            background-color: gray;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: rgb(65, 62, 62);
+        }
+
+        .slick-slide:hover {
+            /* Tambahkan efek hover di sini */
+        }
+
+        .slick-slide h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .hero-title {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        @media (min-width: 360px) and (max-width: 900px) {
+            iframe {
+                width: 99%;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="bg-gray-900 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <a class="flex items-center" href="#">
+                <img src="img/logo.jpg" alt="Logo" class="h-8 w-8 rounded-full mr-2"> <!-- Tambahkan kelas "rounded-full" -->
+                <span class="text-xl font-semibold">SMKN 9 Medan</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-4">
+                <!-- <a href="#about" class="nav-link">About</a>
+                <a href="#facilities" class="nav-link">Fasilitas</a> -->
+                <a href="#programs" class="nav-link hover:underline hover:text-gray-300">program Keahlian</a>
+                <a href="#contact" class="nav-link hover:underline hover:text-gray-300">Kontak</a>
+                <a href="index.html" class="nav-link hover:underline hover:text-gray-300">Beranda</a>
+            </nav>
+            <div class="flex -mr-20 md:mr-0 space-x-4">
+                <img src="img/cat6.jpg" alt="Foto Profil" class="h-8 w-8 rounded-full">
+                <span class="text-white text-lg font-semibold hidden md:block">Nurhabibah Syafitri</span>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="burger-icon" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Responsive Navigation -->
+    <div id="responsive-nav" class="md:hidden fixed inset-0 h-52 bg-gray-800 z-50 hidden">
+        <div class="flex justify-end p-4">
+            <button id="close-btn" class="text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-4 text-white">
+            <ul class="space-y-2 mt-8-">
+                <li class="px-4 py-2 hover:bg-gray-500 hover:text-white transition duration-300">
+                    <a href="#programs" class="flex items-center">
+                        <span class="">Program Keahlian</span>
+                    </a>
+                </li>
+                <li class="px-4 py-2 hover:bg-gray-500 hover:text-white transition duration-300">
+                    <a href="#contact" class="flex items-center">
+                        <span class="">Kontak</span>
+                    </a>
+                </li>
+                <li class="px-4 py-2 hover:bg-gray-500 hover:text-white transition duration-300">
+                    <a href="index.html" class="flex items-center">
+                        <span class="">Beranda</span>
+                    </a>
+                </li>
+                <!-- <a href="#facilities" class="nav-link hover:underline hover:text-gray-300">fasilitas</a>
+                <a href="#gallery" class="nav-link hover:underline hover:text-gray-300">Galeri</a>
+                <a href="#contact" class="nav-link hover:underline hover:text-gray-300">Kontak</a>
+                <a href="jurusan.html" class="nav-link hover:underline hover:text-gray-300">Jurusan</a> -->
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-screen flex items-center text-center relative"
+        style="background-image: url('https://www.kabarberanda.com/wp-content/uploads/2023/04/smk-negeri-9-medan-smk-negeri-9-medan.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 mx-auto text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-7 hero-title">Selamat Datang di SMKN 9 Medan</h1>
+            <!-- <a href="#about"
+                class="bg-white text-blue-500 px-6 py-3 rounded-full text-lg hover:bg-blue-500 hover:text-white transition duration-300 btn">Pelajari Lebih Lanjut</a> -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <!-- Tambahkan about section -->
+
+    <!-- Jurusan Section -->
+    <section class="bg-gray-200 py-12" id="programs">
+        <div class="container mx-auto text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-center md:text-center">Program Keahlian di SMK Negeri 9 Medan</h2>
+                <p class="max-w-xl mx-auto text-gray-700">
+                    SMKN 9 Medan menawarkan berbagai program kejuruan yang mencakup berbagai bidang. Berikut adalah beberapa jurusan yang tersedia:
+                </p>
+        </div>
+        <div class="container mx-auto grid grid-cols-1 p-5 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md items-center text-center">
+                <img src="img/logo/rpl.jpeg" alt="RPL" class="facility-image w-52 h-52 mx-auto mb-4">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Rekayasa Perangkat Lunak</h3>
+                    <p class="text-gray-700">Jurusan Rekayasa Perangkat Lunak membekali siswa dengan keterampilan praktis dalam pembuatan perangkat lunak. Mereka mempelajari bahasa pemrograman, analisis sistem, dan desain antarmuka pengguna. Lulusan memiliki peluang besar untuk berkarir di industri teknologi, perusahaan perangkat lunak, dan konsultan IT. Dengan pertumbuhan teknologi yang pesat, mereka memiliki peran kunci dalam mengembangkan solusi perangkat lunak inovatif.</p>
+                </div>
+            </div>
+
+                
+            <div class="bg-white p-6 rounded-lg shadow-md items-center text-center">
+                <img src="img/logo/tkj.jpeg" alt="TKJ" class="facility-image w-52 h-52 mx-auto mb-4">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Teknik Komputer dan Jaringan</h3>
+                    <p class="text-gray-700">Jurusan Teknologi Komputer dan Jaringan memfokuskan pada keterampilan praktis dalam mengelola dan memelihara sistem komputer serta jaringan. Siswa mempelajari instalasi, konfigurasi, dan troubleshooting perangkat keras dan perangkat lunak. Mereka juga mendapatkan pemahaman mendalam tentang jaringan komputer dan keamanan informasi. Lulusan memiliki prospek karir yang kuat di industri IT dan mampu mendukung infrastruktur teknologi organisasi dengan efisien.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md items-center text-center">
+                <img src="img/logo/bcf.jpeg" alt="BCF" class="facility-image w-52 h-52 mx-auto mb-4">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Broadcasting perfilman</h3>
+                    <p class="text-gray-700">Jurusan Broadcasting Perfilman mempersiapkan siswa untuk terlibat dalam industri media dan hiburan. Mereka mempelajari produksi, pengeditan, dan distribusi konten audiovisual. Siswa juga mendapatkan keterampilan dalam manajemen produksi, penyiaran, dan pemasaran media. Dengan fokus praktis, lulusan siap untuk berkarir di dunia televisi, produksi film, produksi konten digital, dan industri hiburan secara keseluruhan. Mereka memiliki potensi untuk membawa inovasi dan kreativitas ke industri media modern.</p>
+                </div>
+            </div>
+                
+            <div class="bg-white p-6 rounded-lg shadow-md items-center text-center">
+                <img src="img/logo/an.jpeg" alt="Animasi" class="facility-image w-52 h-52 mx-auto mb-4">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Animasi</h3>
+                    <p class="text-gray-700">Jurusan Animasi memungkinkan siswa untuk mengembangkan keterampilan dalam menciptakan animasi visual yang mengesankan. Mereka belajar tentang teknik animasi 2D dan 3D, desain karakter, dan konsep visual. Siswa juga mendapatkan pelatihan dalam menggunakan perangkat lunak animasi terkini. Lulusan dari program ini memiliki potensi besar untuk berkarir di industri animasi, film, permainan, dan produksi konten digital. Mereka adalah kreator visual masa depan yang dapat membawa cerita hidup melalui medium animasi.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md items-center text-center">
+                <img src="img/logo/dkv.jpeg" alt="DKV" class="facility-image w-52 h-52 mx-auto mb-4">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Desain Komunikasi Visual</h3>
+                    <p class="text-gray-700">Jurusan Desain Komunikasi Visual membekali siswa dengan keterampilan kreatif dalam menciptakan desain grafis yang efektif. Mereka mempelajari prinsip desain, komposisi visual, dan penggunaan alat desain terkini. Siswa juga mendapatkan pemahaman tentang branding, ilustrasi, dan produksi grafis. Lulusan dari program ini memiliki potensi besar untuk berkarir di industri desain, periklanan, penerbitan, dan media digital. Mereka adalah penggerak kreativitas dalam menyampaikan pesan melalui desain visual yang menarik dan berimpact.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md items-center text-center">
+                <img src="img/logo/peksos.jpeg" alt="peksos" class="facility-image w-52 h-52 mx-auto mb-4">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Pekerja Sosial</h3>
+                    <p class="text-gray-700">Jurusan Pekerja Sosial mempersiapkan siswa untuk berperan dalam membantu individu dan komunitas yang membutuhkan dukungan sosial. Mereka mempelajari keterampilan dalam mendengarkan aktif, memberikan bimbingan, dan mengembangkan program sosial. Siswa juga mendapatkan pemahaman tentang isu-isu sosial dan kebijakan kesejahteraan. Lulusan dari program ini memiliki kemampuan untuk bekerja di lembaga sosial, pemerintah, atau organisasi non-pemerintah yang berfokus pada pelayanan sosial. Mereka adalah agen perubahan yang berkomitmen untuk meningkatkan kualitas hidup masyarakat.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Facilities Section -->
+    <!-- Tambahkan fasilitas yang tersedia -->
+
+    <!-- Gallery Section -->
+    <!-- Tambahkan galeri foto -->
+
+    <!-- Contact Form and Map Section -->
+    <section class="container mx-auto py-12 flex flex-wrap items-center" id="contact">
+        <!-- Contact Form -->
+        <div class="w-full md:w-1/2 p-6">
+            <h2 class="text-3xl font-bold mb-4 text-center">Hubungi Kami</h2>
+            <form action="#" class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block mb-2 text-sm font-bold">Nama</label>
+                    <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block mb-2 text-sm font-bold">Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded" required>
+                </div>
+                <div class="mb-8">
+                    <label for="message" class="block mb-2 text-sm font-bold">Pesan</label>
+                    <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded" required></textarea>
+                </div>
+                <button type="submit" class="btn w-full">Kirim Pesan</button>
+            </form>
+        </div>
+
+        <!-- Google Maps -->
+        <div class="w-full md:w-1/2 p-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.99040918859!2d98.6208772!3d3.5896743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312e4f46b5ab19%3A0x447dc6ab3d465c1e!2sSekolah%20Menengah%20Kejuruan%20Negeri%209%20Medan!5e0!3m2!1sid!2sid!4v1696528413780!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center p-4">
+        <div class="flex justify-center items-center mb-4">
+            <a href="https://www.instagram.com/nuraisyaftri_/" target="_blank" class="text-white mx-4">
+                <i class="fab fa-instagram"></i>
+                <span class="ml-2">@nuraisyaftri_</span>
+            </a>
+            <a href="mailto:nuraisyafitri@gmail.com" class="text-white mx-4">
+                <i class="far fa-envelope"></i>
+                <span class="ml-1s">nuraisyafitri@gmail.com</span>
+            </a>
+        </div>
+        <div>
+            <p>&copy;Nurhabibah Syafitri</p>
+        </div>
+    </footer>
+
+
+
+    <!-- JavaScript untuk menangani responsif menu -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        const burgerIcon = document.getElementById('burger-icon');
+        const responsiveNav = document.getElementById('responsive-nav');
+        const closeBtn = document.getElementById('close-btn');
+
+        burgerIcon.addEventListener('click', () => {
+            responsiveNav.classList.toggle('hidden');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            responsiveNav.classList.add('hidden');
+        });
+
+        $(document).ready(function () {
+            $('.slick-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000, // Ganti dengan kecepatan slide berikutnya
+            });
+        });
+    </script>
+
+</body>
+
+</html>

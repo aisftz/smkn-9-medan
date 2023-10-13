@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Nurhabibah">
+    <title>SMKN 9 Medan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+
+    <style>
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .hero-title {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        @media (min-width: 360px) and (max-width: 900px) {
+            iframe {
+                width: 99%;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans font-['Roboto', sans-serif] overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="bg-gray-900 p-5 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <a class="flex items-center" href="#">
+                <img src="img/logo.jpg" alt="Logo" class="h-8 w-8 rounded-full mr-2">
+                <span class="text-xl font-semibold">SMKN 9 Medan</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-4 text-lg">
+                <a href="#about" class="nav-link  hover:underline hover:text-gray-300">About</a>
+                <a href="#facilities" class="nav-link hover:underline hover:text-gray-300">Fasilitas</a>
+                <a href="#gallery" class="nav-link  hover:underline hover:text-gray-300">Galeri</a>
+                <a href="#contact" class="nav-link hover:underline hover:text-gray-300">Kontak</a>
+                <a href="jurusan.html" class="nav-link hover:underline hover:text-gray-300">Jurusan</a>
+            </nav>
+            <div class="flex -mr-20 md:mr-0 space-x-4">
+                <img src="img/bibah.jpg" alt="Foto Profil" class="h-10 w-10 rounded-full">
+                <span class="text-white text-lg font-semibold hidden md:block">Nurhabibah Syafitri</span>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="burger-icon" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Responsive Navigation -->
+    <div id="responsive-nav" class="md:hidden fixed inset-0 h-72 bg-gray-800 z-50 hidden">
+        <div class="flex justify-end p-4">
+            <button id="close-btn" class="text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-4 text-white -mt-10">
+            <ul class="space-y-2 mt-8">
+                <li class="px-4 py-2 hover:bg-gray-500 hover:text-white transition duration-300">
+                    <a href="#about" class="flex items-center">
+                        <span class="">About</span>
+                    </a>
+                </li>
+                <li class="px-4 py-2 hover:bg-gray-500 hover:text-white transition duration-300">
+                    <a href="#facilities" class="flex items-center">
+                        <span class="">Fasilitas</span>
+                    </a>
+                </li>
+                <li class="px-4 py-2 hover:bg-gray-500 hover:text-white transition duration-300">
+                    <a href="#gallery" class="flex items-center">
+                        <span class="">Galeri</span>
+                    </a>
+                </li>
+                <li class="px-4 py-2 hover:bg-gray-500 hover:text-white transition duration-300">
+                    <a href="#contact" class="flex items-center">
+                        <span class="">Kontak</span>
+                    </a>
+                </li>
+                <li class="px-4 py-2 hover:bg-gray-500 hover:text-white transition duration-300">
+                    <a href="jurusan.html" class="flex items-center">
+                        <span class="">Jurusan</span>
+                    </a>
+                </li>
+                <!-- <a href="#facilities" class="nav-link hover:underline hover:text-gray-300">fasilitas</a>
+                <a href="#gallery" class="nav-link hover:underline hover:text-gray-300">Galeri</a>
+                <a href="#contact" class="nav-link hover:underline hover:text-gray-300">Kontak</a>
+                <a href="jurusan.html" class="nav-link hover:underline hover:text-gray-300">Jurusan</a> -->
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-screen flex items-center text-center relative"
+        style="background-image: url('img/schl/smkn9.jpeg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 mx-auto text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-7 hero-title p-5 rounded-sm">Selamat Datang di SMKN 9 Medan</h1>
+            <a href="#about"
+                class="bg-white text-blue-500 px-6 py-3 rounded-full text-lg hover:bg-blue-500 hover:text-white transition duration-300 btn">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container mx-auto py-12 flex items-center" id="about">
+        <div class="flex flex-col md:flex-row md:gap-10 items-center md:items-start mb-12 w-full p-5">
+            <div class="md:w-1/2 md:mr-8">
+                <img src="img/schl/smkn9.jpeg" alt="Tentang SMK Negeri 9 Medan" class="mb-4 max-w-full">
+            </div>
+            
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center md:text-left m-auto">Tentang SMK Negeri 9 Medan</h2>
+                <p class="max-w-2xl text-center md:text-xl  text-gray-700 m-auto">SMKN 9 Medan adalah sebuah lembaga pendidikan kejuruan terkemuka yang berlokasi di kota Medan, Sumatera Utara, Indonesia. Sejak didirikan, sekolah ini telah membuktikan komitmennya untuk menyediakan pendidikan berkualitas tinggi di berbagai bidang kejuruan. Dengan fasilitas modern dan lingkungan belajar yang kondusif, SMKN 9 Medan memberikan pengalaman pendidikan yang memadai bagi siswa-siswinya. Program kejuruan yang ditawarkan mencakup teknik, bisnis, kesehatan, dan berbagai bidang relevan lainnya. Staf pengajar yang berkualitas dan berpengalaman berdedikasi untuk membimbing siswa dalam mencapai potensi terbaik mereka. Selain itu, sekolah ini juga aktif dalam mengadakan berbagai kegiatan ekstrakurikuler dan proyek kolaboratif untuk mengembangkan keterampilan sosial dan kepemimpinan siswa. Dengan visi dan misi yang jelas, SMKN 9 Medan bertekad untuk mencetak lulusan yang siap bersaing di dunia kerja modern dengan keahlian kejuruan yang kuat serta moralitas yang tinggi.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <div>
+        <a href="jurusan.html" class="btn flex justify-center w-40 mx-auto bg-gray-300">Lihat Jurusan >></a>
+    </div> -->
+
+    <!-- Facilities Section -->
+    <section class="bg-gray-200 py-12" id="facilities">
+        <div class="container mx-auto text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Fasilitas SMKN 9 Medan</h2>
+            <p class="max-w-xl mx-auto text-gray-700">SMKN 9 Medan dilengkapi dengan berbagai fasilitas modern untuk mendukung proses pembelajaran dan pengembangan siswa.</p>
+            </div>
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Facility 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">Ruang Kelas</h3>
+                <a href="img/kelas.jpeg" target="_blank" rel="noopener noreferrer"><img src="img/kelas.jpeg" alt="Ruang Kelas" class="facility-image"></a>
+                <p class="text-gray-700">Fasilitas ruang kelas kami didesain untuk menciptakan lingkungan belajar yang nyaman dan kondusif.</p>
+            </div>
+            
+            <!-- Facility 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">Perpustakaan</h3>
+                <a href="img/schl/perpus2.jpeg" target="_blank" rel="noopener noreferrer"><img src="img/schl/perpus2.jpeg" alt="Perpustakaan" class="facility-image"></a>
+                <p class="text-gray-700">Perpustakaan kami menyediakan berbagai koleksi buku dan sumber belajar untuk membantu siswa dalam mengejar pengetahuan.</p>
+            </div>
+
+            <!-- Facility 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">Laboratorium Komputer</h3>
+                <a href="img/schl/lab komputer.jpeg" target="_blank" rel="noopener noreferrer"><img src="img/schl/lab komputer.jpeg" alt="Laboratorium Komputer" class="facility-image"></a>
+                <p class="text-gray-700">Fasilitas laboratorium komputer dilengkapi dengan perangkat keras dan perangkat lunak terbaru untuk mendukung pembelajaran IT.</p>
+            </div>
+            
+            
+            <!-- Facility 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">Lapangan Olahraga</h3>
+                <a href="img/schl/lapangan.jpeg" target="_blank" rel="noopener noreferrer"><img src="img/schl/lapangan.jpeg" alt="Lapangan Olahraga" class="facility-image"></a>
+                <p class="text-gray-700">Kami memiliki lapangan olahraga yang luas untuk mendukung kegiatan fisik dan olahraga siswa.</p>
+            </div>
+
+            <!-- Facility 5 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">Ruangan Multimedia</h3>
+                <a href="img/schl/r.bcf.jpeg" target="_blank" rel="noopener noreferrer"><img src="img/schl/r.bcf.jpeg" alt="Ruangan Multimedia" class="facility-image"></a>
+                <p class="text-gray-700">Fasilitas ruangan multimedia kami dilengkapi dengan peralatan modern untuk
+                    mendukung pembelajaran berbasis teknologi.</p>
+            </div>
+
+            <!-- Facility 6 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">Kantin</h3>
+                <a href="img/schl/kantin.jpg" target="_blank" rel="noopener noreferrer"><img src="img/schl/kantin.jpg" alt="Kantin" class="facility-image"></a>
+                <p class="text-gray-700">Kantin sekolah menyediakan berbagai pilihan makanan dan minuman untuk siswa
+                    dan staf.</p>
+            </div>
+
+             <!-- Facility 7: Aula Serbaguna -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">Aula Serbaguna</h3>
+                <a href="img/schl/aula.jpeg" target="_blank" rel="noopener noreferrer"><img src="img/schl/aula.jpeg" alt="Aula Serbaguna" class="facility-image"></a>
+                <p class="text-gray-700">Aula serbaguna kami dapat digunakan untuk berbagai acara dan kegiatan sekolah,
+                    termasuk seminar, presentasi, dan pertemuan besar.</p>
+            </div>
+
+            <!-- Facility 8 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">Musholla</h3>
+                <a href="img/schl/musholla.jpeg" target="_blank" rel="noopener noreferrer"><img src="img/schl/musholla.jpeg" alt="Musholla" class="facility-image"></a>
+                <p class="text-gray-700">Musholla kami menyediakan lingkungan yang nyaman dan mendukung untuk beribadah.</p>
+            </div>
+
+
+            <!-- Facility 9 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">UKS</h3>
+                <a href="img/schl/UKS.jpeg" target="_blank" rel="noopener noreferrer"><img src="img/schl/UKS.jpeg" alt="Fasilitas UKS" class="facility-image"></a>
+                <p class="text-gray-700">Fasilitas UKS kami dirancang khusus untuk mendukung kesehatan dan kegiatan sosial siswa.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="container mx-auto py-12" id="gallery">
+        <div class="flex flex-col items-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Galeri</h2>
+            <p class="max-w-xl mx-auto text-center text-gray-700">Lihatlah momen-momen berharga di sekolah kami.</p>
+        </div>
+        <div class="container mx-auto slick-slider">
+            <div class="slick-slide">
+                <div class="relative rounded-lg overflow-hidden">
+                    <img src="img/kelas.jpeg" alt="Galeri 1"
+                        class="w-full h-64 object-cover object-center transition duration-300 transform hover:scale-105">
+                </div>
+            </div>
+            <div class="slick-slide">
+                <div class="relative rounded-lg overflow-hidden">
+                    <img src="img/schl/lab komputer.jpeg" alt="Galeri 2"
+                        class="w-full h-64 object-cover object-center transition duration-300 transform hover:scale-105">
+                </div>
+            </div>
+            <div class="slick-slide">
+                <div class="relative rounded-lg overflow-hidden">
+                    <img src="img/schl/lapangan.jpeg" alt="Galeri 2"
+                        class="w-full h-64 object-cover object-center transition duration-300 transform hover:scale-105">
+                </div>
+            </div>
+            <div class="slick-slide">
+                <div class="relative rounded-lg overflow-hidden">
+                    <img src="img/schl/r.bcf.jpeg" alt="Galeri 2"
+                        class="w-full h-64 object-cover object-center transition duration-300 transform hover:scale-105">
+                </div>
+            </div>
+            <div class="slick-slide">
+                <div class="relative rounded-lg overflow-hidden">
+                    <img src="img/schl/kantin.jpg" alt="Galeri 2"
+                        class="w-full h-64 object-cover object-center transition duration-300 transform hover:scale-105">
+                </div>
+            </div>
+            <div class="slick-slide">
+                <div class="relative rounded-lg overflow-hidden">
+                    <img src="img/schl/aula.jpeg" alt="Galeri 2"
+                        class="w-full h-64 object-cover object-center transition duration-300 transform hover:scale-105">
+                </div>
+            </div>
+            <div class="slick-slide">
+                <div class="relative rounded-lg overflow-hidden">
+                    <img src="img/schl/musholla.jpeg" alt="Galeri 2"
+                        class="w-full h-64 object-cover object-center transition duration-300 transform hover:scale-105">
+                </div>
+            </div>
+            <div class="slick-slide">
+                <div class="relative rounded-lg overflow-hidden">
+                    <img src="img/s1.jpg" alt="Galeri 2"
+                        class="w-full h-64 object-cover object-center transition duration-300 transform hover:scale-105">
+                </div>
+            </div>
+            <div class="slick-slide">
+                <div class="relative rounded-lg overflow-hidden">
+                    <img src="img/schl/UKS.jpeg" alt="Galeri 2"
+                        class="w-full h-64 object-cover object-center transition duration-300 transform hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section
+    <section class="bg-blue-500 text-white py-12" id="contact">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Hubungi Kami</h2>
+            <p class="max-w-xl mx-auto mb-8">Jangan ragu untuk menghubungi kami untuk informasi lebih lanjut.</p>
+            <p class="text-2xl font-bold mb-2">(123) 456-7890</p>
+            <p>info@sekolahxyz.com</p>
+        </div>
+    </section> -->
+
+    <!-- Contact Form and Map Section -->
+    <section class="container mx-auto py-12 flex flex-wrap items-center" id="contact">
+        <div class="w-full md:w-1/2 p-6">
+            <h2 class="text-3xl font-bold mb-4 text-center">Hubungi Kami</h2>
+            <form action="#" class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block mb-2 text-sm font-bold">Nama</label>
+                    <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block mb-2 text-sm font-bold">Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded" required>
+                </div>
+                <div class="mb-8">
+                    <label for="message" class="block mb-2 text-sm font-bold">Pesan</label>
+                    <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded" required></textarea>
+                </div>
+                <button type="submit" class="btn w-full">Kirim Pesan</button>
+            </form>
+        </div>
+
+        <!-- Google Maps -->
+        <div class="w-full md:w-1/2 p-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.99040918859!2d98.6208772!3d3.5896743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312e4f46b5ab19%3A0x447dc6ab3d465c1e!2sSekolah%20Menengah%20Kejuruan%20Negeri%209%20Medan!5e0!3m2!1sid!2sid!4v1696528413780!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center p-4">
+        <div class="flex justify-center items-center mb-4">
+            <a href="https://www.instagram.com/nuraisyaftri_/" target="_blank" class="text-white mx-4">
+                <i class="fab fa-instagram"></i>
+                <span class="ml-2">@nuraisyaftri_</span>
+            </a>
+            <a href="mailto:nuraisyafitri@gmail.com" class="text-white mx-4">
+                <i class="far fa-envelope"></i>
+                <span class="ml-2">nuraisyafitri@gmail.com</span>
+            </a>
+        </div>
+        <div>
+            <p>&copy;Nurhabibah Syafitri</p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        const burgerIcon = document.getElementById('burger-icon');
+        const responsiveNav = document.getElementById('responsive-nav');
+        const closeBtn = document.getElementById('close-btn');
+
+        burgerIcon.addEventListener('click', () => {
+            responsiveNav.classList.toggle('hidden');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            responsiveNav.classList.add('hidden');
+        });
+
+        $(document).ready(function () {
+            $('.slick-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000, 
+            });
+        });
+    </script>
+
+</body>
+
+</html>
